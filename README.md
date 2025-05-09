@@ -8,10 +8,6 @@ This project demonstrates a **microservices architecture** using **orchestration
 
 ---
 
-## 🏗️ Architecture Overview
-
-![Architecture Diagram](./diagrams/orchestration-architecture.png)
-
 ### 🔁 Flow (Create Order)
 
 1. Create Order Request
@@ -38,7 +34,42 @@ This project demonstrates a **microservices architecture** using **orchestration
 ---
 
 ## 🛠️ Project Structure
-
+```
+MicroservicesSample3.1/
+│
+├── ApiGateway/                  # Ocelot API Gateway (Port 9000)
+│   ├── ocelot.json
+│   ├── appsettings.json
+│   └── Program.cs
+│
+├── OrderService/                  # Order microservice (Port 5002)
+│   ├── Program.cs
+│   ├── Controllers/
+│   │   └── OrdersController.cs
+│   ├── Data/
+│   │   └── OrderDbContext.cs
+│   ├── Models/
+│   │   ├── Order.cs
+│   │   ├── OrderRequestDto.cs
+│   │   ├── OrderResponseDto.cs
+│   │   ├── OrderUpdateRequestDto.cs
+│   │   └── ProductDto.cs
+│   └── appsettings.json
+│
+├── ProductService/                  # Product microservice (Port 5001)
+│   ├── Program.cs
+│   ├── Controllers/
+│   │   └── ProductsController.cs
+│   ├── Data/
+│   │   └── ProductDbContext.cs
+│   ├── Models/
+│   │   ├── Product.cs
+│   │   ├── ProductCreateDto.cs
+│   │   └── ProductUpdateDto.cs
+│   └── appsettings.json
+│
+└── MicroservicesSolution.sln        # Solution file
+```
 --- 
 
 ## ✅ Responsibilities
