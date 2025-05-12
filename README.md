@@ -35,7 +35,7 @@ This project demonstrates a **microservices architecture** using **orchestration
 
 ## 🛠️ Project Structure
 ```
-MicroservicesSample3.1/
+MicroservicesSample3.2/
 │
 ├── ApiGateway/                  # Ocelot API Gateway (Port 9000)
 │   ├── ocelot.json
